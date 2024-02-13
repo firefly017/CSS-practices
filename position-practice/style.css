@@ -7,17 +7,17 @@
 .main {
   min-width: 100vw;
   min-height: 100vh;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
 }
 
 .container-1 {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 70vw;
 }
 
 .color-box {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 40vh;
   display: flex;
   /* justify-content: center; */
@@ -43,7 +43,7 @@
 }
 
 .container-2 {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 30vw;
   height: 100vh;
   display: flex;
