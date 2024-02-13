@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image box</title>
+</head>
+
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 45em;
+        width: 35em;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* position: absolute; */
+        border-radius: 8px;
+        /* overflow: hidden; */
+    }
+
+    .card::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* z-index: -1; */
+        opacity: 0.2;
+        filter: blur(1em);
+        /* border: 2px solid red; */
+    }
+</style>
+
+<body>
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1629387280946-94c24eb0f6ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyOTgyOTg3Nw&ixlib=rb-1.2.1&q=80&w=400">
+    </div>
+</body>
+
+</html>

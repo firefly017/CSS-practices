@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box using ::before & ::after</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yellow-box {
+        height: 25em;
+        width: 25em;
+        background: yellow;
+        position: relative;
+    }
+
+    .yellow-box::before {
+        height: 20em;
+        width: 20em;
+        content: "";
+        background: red;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .yellow-box::after {
+        height: 15em;
+        width: 15em;
+        content: "";
+        background: black;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div class="yellow-box"></div>
+
+</body>
+
+</html>

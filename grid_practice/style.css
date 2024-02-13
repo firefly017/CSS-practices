@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.testimonial-grid {
+  /* border: 2px solid black; */
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  /* grid-template-columns: repeat(4, 1fr);  */
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.testimonial {
+  /* border: 2px solid red; */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.flex {
+  /* border: 1px solid black; */
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+  gap: 10px;
+}
+
+.flex img {
+  border-radius: 50%;
+  border: 5px solid #c4c4c4;
+}
+
+#card-1 {
+  background: hwb(226 31% 3%);
+  color: white;
+}
+
+#card-2 {
+  background: rgb(106, 107, 109);
+  color: white;
+}
+
+#card-3,
+#card-5 {
+  background: rgba(196, 232, 245, 0.897);
+}
+
+#card-4 {
+  background: rgb(62, 57, 66);
+  color: white;
+}

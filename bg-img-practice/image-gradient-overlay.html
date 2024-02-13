@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding gradient overlay to images</title>
+</head>
+
+<style>
+    /* .container {
+        width: 500px;
+        height: 700px;
+        position: relative;
+    } */
+
+    .gradient {
+        min-height: 50vh;
+        min-width: 100vw;
+        background-image: url('/images/elias-kipfer-59qL47fiWhA-unsplash.jpg'), linear-gradient(to bottom, brown, black);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100%;
+        width: 100%; */
+        /* opacity: 0.5; */
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+    }
+
+    /* img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    } */
+
+    h1 {
+        color: white;
+        font-size: 10rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="gradient">
+            <h1>This is a image</h1>
+        </div>
+        <!-- <img src="/images/elias-kipfer-59qL47fiWhA-unsplash.jpg" -->
+        <!-- alt="random image"> -->
+    </div>
+</body>
+
+</html>

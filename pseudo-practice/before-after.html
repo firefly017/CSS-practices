@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+    }
+
+    p::before {
+        content: 'hello';
+        background: red;
+        font-size: 20px;
+        color: aliceblue;
+        font-weight: 900;
+        display: block;
+    }
+
+    p::after {
+        content: 'goodbye';
+        background: red;
+        font-size: 20px;
+        color: aliceblue;
+        font-weight: 900;
+        display: block;
+    }
+</style>
+
+<body>
+    <p>Here is some random text</p>
+    <!-- <img src="//unsplash.it/500/500" alt=""> -->
+</body>
+
+</html>

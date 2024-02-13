@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lower the opacity of a background image with CSS</title>
+</head>
+
+<style>
+    .low-opacity-bg-image {
+        background-image: url(./images/signal-2020-06-02-133247.jpeg);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        min-height: 500px;
+        position: relative;
+        isolation: isolate;
+    }
+
+    .low-opacity-bg-image::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: #464243;
+        opacity: .35;
+    }
+</style>
+
+<body>
+    <div class="low-opacity-bg-image">
+        <h1>Background image opacity?</h1>
+        <p>It's possible! ... sort of</p>
+    </div>
+</body>
+
+</html>

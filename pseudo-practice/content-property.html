@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::before & ::after content property</title>
+</head>
+
+<script src="https://kit.fontawesome.com/9cc1b715f2.js"
+    crossorigin="anonymous"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+    h1,
+    h2,
+    h3 {
+        color: brown;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: brown;
+    }
+
+    blockquote {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    blockquote::before {
+        content: open-quote;
+    }
+
+    blockquote::after {
+        content: close-quote;
+    }
+
+    a[data-tool-tip] {
+        position: relative;
+    }
+
+    a[data-tool-tip]::after {
+        content: attr(data-tool-tip);
+        display: block;
+        position: absolute;
+        background-color: bisque;
+        padding: 1em 3em;
+        color: gray;
+        border-radius: 5px;
+        font-size: .8em;
+        left: 0;
+        bottom: 0;
+        white-space: nowrap;
+        transform: scale(0);
+        transition:
+            transform ease-out 150ms, bottom ease-out 150ms;
+    }
+
+    a[data-tool-tip]:hover::after {
+        transform: scale(1);
+        bottom: 100%;
+    }
+
+    .decorations {
+        padding: 7em;
+    }
+
+    .section-with-deco::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f0e7';
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: center;
+        color: red;
+    }
+
+    a[href$=".pdf"]::after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f1c1';
+        padding-left: 5px;
+    }
+
+    a[href^="http"]::after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f08e';
+        font-weight: 900;
+        font-size: .8em;
+        padding-left: 5px;
+
+    }
+
+    .counters h2,
+    h3 {
+        text-align: left;
+    }
+
+    .counters {
+        background: lightgray;
+        text-align: left;
+        padding: 5em 8em;
+        margin-top: 7em;
+
+        counter-reset: counter-name;
+    }
+
+    .section {
+        position: relative;
+        counter-reset: ordered-list;
+
+    }
+
+    .section::before {
+        counter-increment: counter-name;
+        content: counter(counter-name);
+        position: absolute;
+        left: -2.5em;
+        top: -.5em;
+        background: white;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid gray;
+        color: gray;
+        box-sizing: border-box;
+    }
+
+    .counters ol {
+        list-style: none;
+    }
+
+    .counters li::before {
+        counter-increment: ordered-list;
+        content: counter(ordered-list);
+        content: 'list item ' counter(ordered-list) ') ';
+        font-size: .8em;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="intro">
+            <h1>Here is some generic content</h1>
+            <blockquote>This is a blockquote, where I could have a testimonial
+                talking about how great my services are</blockquote>
+            <p>Lorem ipsum <a href="#" data-tool-tip="a cool tool tip">dolor,
+                    sit
+                    amet</a> consectetur adipisicing
+                elit.
+                Necessitatibus minima recusandae aspernatur porro ratione veniam
+                quas illum nemo magnam quisquam, ullam ipsa natus vero? Odio
+                aperiam
+                autem assumenda error sed, architecto impedit ipsum, magni,
+                voluptatem ipsam sunt deleniti optio molestiae voluptas
+                dignissimos
+                facilis esse ad! A consectetur facilis quae eaque illo quo omnis
+                amet doloremque. Consectetur a amet quasi ratione soluta dolor?
+                Laborum repellendus obcaecati laudantium aliquid impedit
+                perferendis
+                dolorum maxime tempora ipsum reiciendis modi, eos error enim
+                officia
+                consequuntur aut tempore, dolorem nihil aperiam saepe
+                exercitationem
+                quidem molestiae, distinctio accusantium? Impedit cumque maxime
+                iste
+                praesentium, enim harum quod nemo.</p>
+        </div>
+        <div class="decorations">
+            <h2>We can decorate sections!</h2>
+            <section class="section-with-deco">
+                <h3>section title here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officiis
+                    exercitationem quam fuga iure vel odit tenetur officia!
+                    Accusamus
+                    inventore magni molestiae vitae eveniet commodi, officia
+                    mollitia.
+                    Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                    aliquam
+                    repellat earum expedita iure, consequuntur minus modi fugit
+                    corrupti
+                    deserunt iusto, quos ut veniam magni numquam quae?</p>
+            </section>
+            <section class="section-with-deco">
+                <h3>section title here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officiis
+                    exercitationem quam fuga iure vel odit tenetur officia!
+                    Accusamus
+                    inventore magni molestiae vitae eveniet commodi, officia
+                    mollitia.
+                    Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                    aliquam
+                    repellat earum expedita iure, consequuntur minus modi fugit
+                    corrupti
+                    deserunt iusto, quos ut veniam magni numquam quae?</p>
+            </section>
+            <section class="section-with-deco">
+                <h3>section title here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officiis
+                    exercitationem quam fuga iure vel odit tenetur officia!
+                    Accusamus
+                    inventore magni molestiae vitae eveniet commodi, officia
+                    mollitia.
+                    Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                    aliquam
+                    repellat earum expedita iure, consequuntur minus modi fugit
+                    corrupti
+                    deserunt iusto, quos ut veniam magni numquam quae?</p>
+            </section>
+            <section class="section-with-deco">
+                <h3>section title here</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officiis
+                    exercitationem quam fuga iure vel odit tenetur officia!
+                    Accusamus
+                    inventore magni molestiae vitae eveniet commodi, officia
+                    mollitia.
+                    Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                    aliquam
+                    repellat earum expedita iure, consequuntur minus modi fugit
+                    corrupti
+                    deserunt iusto, quos ut veniam magni numquam quae?</p>
+            </section>
+            <section class="section-with-deco">
+                <h3>Add add content after links</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, <a
+                        href="example.pdf">dolor,
+                        sit
+                        amet</a> adipisicing elit. Consectetur
+                    at quae, reprehenderit voluptatem ipsum, quaerat quo libero,
+                    error
+                    facilis impedit dignissimos tempora blanditiis quam incidunt
+                    mollitia iste accusamus recusandae odit officiis pariatur
+                    ipsa
+                    excepturi. Numquam iure consequuntur <a href="http">dolor,
+                        sit
+                        amet</a>
+                    deleniti dolorem dolorum ipsam
+                    voluptatem? Itaque dolor odit, aspernatur temporibus
+                    repellendus
+                    delectus debitis.</p>
+            </section>
+        </div>
+        <div class="counters">
+            <h2>we can number sections!</h2>
+
+            <h3 class="section">section title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis
+                exercitationem quam fuga iure vel odit tenetur officia!
+                Accusamus
+                inventore magni molestiae vitae eveniet commodi, officia
+                mollitia.
+                Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                aliquam
+                repellat earum expedita iure, consequuntur minus modi fugit
+                corrupti
+                deserunt iusto, quos ut veniam magni numquam quae?</p>
+
+
+            <h3 class="section">section title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis
+                exercitationem quam fuga iure vel odit tenetur officia!
+                Accusamus
+                inventore magni molestiae vitae eveniet commodi, officia
+                mollitia.
+                Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                aliquam
+                repellat earum expedita iure, consequuntur minus modi fugit
+                corrupti
+                deserunt iusto, quos ut veniam magni numquam quae?</p>
+
+
+            <h3 class="section">section title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis
+                exercitationem quam fuga iure vel odit tenetur officia!
+                Accusamus
+                inventore magni molestiae vitae eveniet commodi, officia
+                mollitia.
+                Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                aliquam
+                repellat earum expedita iure, consequuntur minus modi fugit
+                corrupti
+                deserunt iusto, quos ut veniam magni numquam quae?</p>
+
+
+            <h3 class="section">section title here</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis
+                exercitationem quam fuga iure vel odit tenetur officia!
+                Accusamus
+                inventore magni molestiae vitae eveniet commodi, officia
+                mollitia.
+                Expedita, placeat molestiae. Repellendus, tempora? Voluptate
+                aliquam
+                repellat earum expedita iure, consequuntur minus modi fugit
+                corrupti
+                deserunt iusto, quos ut veniam magni numquam quae?</p>
+            <section>
+                <section>
+                    <section>
+                        <section>
+                            <section>
+
+
+                                <h3 class="section">section title here</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                    Officiis
+                                    exercitationem quam fuga iure vel odit
+                                    tenetur officia!
+                                    Accusamus
+                                    inventore magni molestiae vitae eveniet
+                                    commodi, officia
+                                    mollitia.
+                                    Expedita, placeat molestiae. Repellendus,
+                                    tempora? Voluptate
+                                    aliquam
+                                    repellat earum expedita iure, consequuntur
+                                    minus modi fugit
+                                    corrupti
+                                    deserunt iusto, quos ut veniam magni numquam
+                                    quae?</p>
+
+                                <ol>
+                                    <li>I'm a list item</li>
+                                    <li>me too!</li>
+                                    <li>me three</li>
+                                    <li>Hello there</li>
+                                </ol>
+                                <ol>
+                                    <li>I'm a list item</li>
+                                    <li>me too!</li>
+                                    <li>me three</li>
+                                    <li>Hello there</li>
+                                </ol>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
