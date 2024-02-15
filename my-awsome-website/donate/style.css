@@ -479,11 +479,6 @@ input[type="text"] {
 }
 
 /* Responsive: Section: How to contribute */
-/* @media screen and (max-width: 1200px) {
-  .depend-donation .btn {
-    width: 15rem;
-  }
-} */
 
 @media screen and (max-width: 1200px) {
   .flex-box {
@@ -496,4 +491,36 @@ input[type="text"] {
   :is(.img, .img img, .width-50) {
     width: 100%;
   }
+}
+
+/* Section: get my updates */
+.updates {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.text-updates h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.subscribe-updates {
+  padding: 50px;
+  background-color: rgba(255, 166, 0, 0.39);
+}
+
+input {
+  width: 500px;
+  height: 50px;
+}
+
+.subscribe-updates .submit {
+  color: white;
+  background-color: red;
+  border: none;
 }
