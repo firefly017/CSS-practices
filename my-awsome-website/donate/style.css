@@ -520,7 +520,25 @@ input {
 }
 
 .subscribe-updates .submit {
+  width: 300px;
   color: white;
   background-color: red;
   border: none;
+}
+
+/* section:footer */
+.footer {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer h1 {
+  color: red;
+  font-style: italic;
+  font-size: 2rem;
 }
