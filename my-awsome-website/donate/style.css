@@ -344,10 +344,10 @@ input[type="text"] {
 }
 
 .card {
-  height: 350px;
+  /* height: 350px; */
   width: 400px;
   box-sizing: border-box;
-  padding: 50px 20px 0 30px;
+  padding: 50px 20px 20px 30px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -381,9 +381,8 @@ input[type="text"] {
   }
 
   .card {
-    height: 330px;
+    /* height: 330px; */
     width: 350px;
-    padding: 50px 20px 0 30px;
     gap: 20px;
   }
 }
@@ -394,7 +393,7 @@ input[type="text"] {
   }
 
   .card {
-    height: 350px;
+    /* height: 350px; */
     width: 60%;
   }
 }
@@ -417,7 +416,7 @@ input[type="text"] {
   }
 
   .card {
-    height: 350px;
+    /* height: 350px; */
     width: 90%;
     gap: 15px;
   }
