@@ -14,7 +14,7 @@ body {
 
 /* Hero Section */
 .hero {
-  width: 100vw;
+  /* width: 100vw; */
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -162,7 +162,7 @@ body {
 
 /* Section: Donate Today */
 .donate-today {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,7 +317,7 @@ input[type="text"] {
 
 /* Section:Donation Plan */
 .donate-plan {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -494,8 +494,9 @@ input[type="text"] {
 }
 
 /* Section: get my updates */
+
 .updates {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -517,12 +518,17 @@ input[type="text"] {
 input {
   width: 500px;
   height: 50px;
+  padding: 8px 16px;
+  outline: none;
+  border: 0;
 }
 
 .subscribe-updates .submit {
   width: 300px;
   color: white;
   background-color: red;
+  position: relative;
+  left: -5px;
   border: none;
 }
 
@@ -570,7 +576,7 @@ input {
 
 /* section:footer */
 .footer {
-  width: 100vw;
+  /* width: 100vw; */
   height: 70px;
   background-color: black;
   color: white;
