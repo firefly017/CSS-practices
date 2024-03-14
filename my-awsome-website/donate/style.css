@@ -481,13 +481,24 @@ input[type="text"] {
 /* Responsive: Section: How to contribute */
 
 @media screen and (max-width: 1200px) {
+  /* .flex-box {
+    flex-direction: column;
+  } */
+
+  :is(.img, .img img, .width-50) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .flex-box {
     flex-direction: column;
   }
 
   .depend-donation .btn {
-    width: 25rem;
+    width: 100%;
   }
+
   :is(.img, .img img, .width-50) {
     width: 100%;
   }
