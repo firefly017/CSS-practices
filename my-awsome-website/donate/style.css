@@ -577,11 +577,13 @@ input {
 
 @media screen and (max-width: 576px) {
   input {
-    width: 220px;
+    width: 100%;
   }
 
   .subscribe-updates .submit {
-    width: 70px;
+    margin-top: 8px;
+    width: 100%;
+    left: 0px;
   }
 }
 
