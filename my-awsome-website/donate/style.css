@@ -526,6 +526,48 @@ input {
   border: none;
 }
 
+/* Responsive Section: get my updates */
+
+@media screen and (max-width: 1200px) {
+  input {
+    width: 400px;
+  }
+
+  .subscribe-updates .submit {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  input {
+    width: 350px;
+  }
+
+  .subscribe-updates .submit {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  input {
+    width: 300px;
+  }
+
+  .subscribe-updates .submit {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  input {
+    width: 220px;
+  }
+
+  .subscribe-updates .submit {
+    width: 70px;
+  }
+}
+
 /* section:footer */
 .footer {
   width: 100vw;
