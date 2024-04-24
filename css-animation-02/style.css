@@ -1,0 +1,44 @@
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  color: red;
+  background-color: pink;
+  border: 10px solid red;
+  border-radius: 5px;
+
+  /* transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s; */
+
+  transition: transform 0.3s ease 0s;
+}
+
+.btn:hover {
+  transform: translateY(-10px);
+  background-color: red;
+  color: white;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.heading-1 {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  transform: translateX(150px);
+}
