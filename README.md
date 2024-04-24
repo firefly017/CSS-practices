@@ -6,3 +6,4 @@
 4. Hero section : https://hero-section-header.netlify.app/
 5. figma donation design: https://figma-donation-design.netlify.app/
 6. CSS animation video 01: https://css-animation-01.netlify.app/
+7. CSS animation video 02 : https://css-animation-02.netlify.app/
