@@ -8,3 +8,4 @@
 6. CSS animation video 01: https://css-animation-01.netlify.app/
 7. CSS animation video 02 : https://css-animation-02.netlify.app/
 8. CSS animation video 03: https://css-animation-03.netlify.app/
+9. CSS animation clock: https://css-animation-clock.netlify.app/
